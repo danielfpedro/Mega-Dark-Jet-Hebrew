@@ -79,4 +79,12 @@ public class HeroController : MonoBehaviour {
 			i++;
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		Debug.Log ("BATEU OS MENONOS");
+		if (coll.gameObject.tag == "Enemy") {
+			HealthManager hm = GetComponent<HealthManager> ();
+			hm.KillIt ();
+		}
+	}
 }

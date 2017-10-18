@@ -15,9 +15,4 @@ public class EnemyMovement : MonoBehaviour {
 		rb.velocity = Vector2.left * speed;
 	}
 
-	void OnTriggerEnter2D(Collider2D collider) {
-		if (collider.tag == "Hero") {
-			collider.gameObject.GetComponent<HealthManager> ().killIt();
-		}
-	}
 }

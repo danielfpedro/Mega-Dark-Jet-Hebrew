@@ -21,13 +21,13 @@ public class HealthManager : MonoBehaviour {
 		}
 	}
 
-	public void killIt() {
+	public void KillIt() {
 		currentHealth = 0;
 	}
 
-	public void hurt(int damage) {
+	public void Hurt(int damage, Vector2 point) {
 
-		Instantiate (pe, transform.position, transform.rotation);
+		Instantiate (pe, point, transform.rotation);
 
 		currentHealth -= damage;
 	}

@@ -13,10 +13,10 @@ public class MainCamera : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
-		Transform targetPosition = gameController.Hero.transform;
+		// Transform targetPosition = gameController.Hero.transform;
 
 		// Coloco o Z manualmente par deixar a camera na frente do cenario 
-		transform.position = new Vector3 (transform.position.x, targetPosition.position.y, zPosition);
+		// transform.position = new Vector3 (transform.position.x, targetPosition.position.y, zPosition);
 	}
 
 	void Update(){

@@ -15,6 +15,9 @@ public class Boundary : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D collider) {
-		Destroy (collider.gameObject);
+		if (collider.tag == "Bullet" || collider.tag == "Enemy") {
+			Destroy (collider.gameObject);	
+		}
+
 	}
 }
