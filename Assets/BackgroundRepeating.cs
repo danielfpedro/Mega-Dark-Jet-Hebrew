@@ -7,6 +7,8 @@ public class BackgroundRepeating : MonoBehaviour {
 	private BoxCollider2D boxCollider;
 	private float xSize;
 
+	public GameObject secondBackground;
+
 	// Use this for initialization
 	void Start () {
 		boxCollider = GetComponent<BoxCollider2D> ();

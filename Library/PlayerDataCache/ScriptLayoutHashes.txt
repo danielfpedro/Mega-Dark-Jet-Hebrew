@@ -109,6 +109,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
 ad1601f8198d696ba7ce0a93bc86b3b7 Assembly-CSharp.dll:.Bullet
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackgroundScrolling
 1a5f1086530983fd0a237dde4ee17bf0 Assembly-CSharp.dll:.HealthManager
 d63abcea72f06cf671e6525d697fd7b9 Assembly-CSharp.dll:.HeroController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Boundary
@@ -126,7 +127,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-05bd465c8d3994ed4966f351c377347b Assembly-CSharp.dll:.GameController
+e3647fbbb9e944611c9a17fec749bd7c Assembly-CSharp.dll:.GameController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 5f2ad81aa8994e8fbe25d1e57afe6773 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
@@ -138,5 +139,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
 af3ab82b47f51e927b47d3d44666fdac Assembly-CSharp.dll:.EnemyWave
 d18c33edcaacdc156f492b974381a4ea Assembly-CSharp.dll:.MainCamera
-dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.BackgroundScrolling
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackgroundRepeating
+b7d28027fa08203150f9154243f58e32 Assembly-CSharp.dll:.BackgroundRepeating
