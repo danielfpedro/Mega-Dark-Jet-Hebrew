@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\BackgroundRepeating.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AIFollowTarget.cs">
     <Files>
-      <File FileName="Assets\BackgroundScrolling.cs" Line="18" Column="34" />
-      <File FileName="Assets\BackgroundRepeating.cs" Line="24" Column="42" />
-      <File FileName="Assets\Boundary.cs" Line="18" Column="36" />
+      <File FileName="Assets\Enemy.cs" Line="17" Column="76" />
+      <File FileName="Assets\AIFollowTarget.cs" Line="12" Column="38" />
+      <File FileName="Assets\Scripts\HeroController.cs" Line="45" Column="75" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

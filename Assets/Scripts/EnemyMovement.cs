@@ -12,7 +12,10 @@ public class EnemyMovement : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		rb.velocity = Vector2.left * speed;
+	}
+
+	public void move(float x, float y) {
+		rb.velocity = new Vector2(x * speed, y * speed);
 	}
 
 }

@@ -42,6 +42,8 @@ public class HeroController : MonoBehaviour {
 
 		selectWeapon ();
 
+		Debug.DrawRay (new Vector2(transform.position.x, transform.position.y), Vector2.right * 30f, Color.red);
+
 	}
 	
 	// Update is called once per frame
@@ -57,7 +59,7 @@ public class HeroController : MonoBehaviour {
 	float getSpeed(string type) {
 
 		if (type == "horizontal") {
-			return (Input.GetAxis("Horizontal") != 0 && canMove && isPlayer) ? Input.GetAxis ("Horizontal") * speed : GameController.heroDefaultSpeed;
+			return (Input.GetAxis("Horizontal") != 0 && canMove && isPlayer) ? Input.GetAxis ("Horizontal") * speed : 0f;
 		}
 		if (type == "vertical") {
 			return (canMove && isPlayer) ? Input.GetAxis ("Vertical") * speed : 0f;

@@ -51,17 +51,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BackgroundRepeating.cs" />
-     <Compile Include="Assets\BackgroundScrolling.cs" />
-     <Compile Include="Assets\Boundary.cs" />
-     <Compile Include="Assets\Bullet.cs" />
-     <Compile Include="Assets\EnemyMovement.cs" />
-     <Compile Include="Assets\EnemyWave.cs" />
-     <Compile Include="Assets\GameController.cs" />
-     <Compile Include="Assets\HealthManager.cs" />
-     <Compile Include="Assets\HeroController.cs" />
-     <Compile Include="Assets\MainCamera.cs" />
-     <Compile Include="Assets\Weapon.cs" />
+     <Compile Include="Assets\AIFollowTarget.cs" />
+     <Compile Include="Assets\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Background\BackgroundRepeating.cs" />
+     <Compile Include="Assets\Scripts\Background\BackgroundScrolling.cs" />
+     <Compile Include="Assets\Scripts\Boundary.cs" />
+     <Compile Include="Assets\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\EnemyWave.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\HealthManager.cs" />
+     <Compile Include="Assets\Scripts\HeroController.cs" />
+     <Compile Include="Assets\Scripts\MainCamera.cs" />
+     <Compile Include="Assets\Scripts\Weapon.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

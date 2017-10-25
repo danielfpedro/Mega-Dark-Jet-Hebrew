@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 61644465682844730}
   - component: {fileID: 114642341071181606}
   - component: {fileID: 114800212186247582}
+  - component: {fileID: 114701269001453020}
+  - component: {fileID: 114537671507664018}
   m_Layer: 0
   m_Name: Ximbinha
   m_TagString: Enemy
@@ -38,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1596683677151500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.19, z: 0}
-  m_LocalScale: {x: 1, y: 7.7, z: 1}
+  m_LocalPosition: {x: 10.62, y: -2.6, z: 0}
+  m_LocalScale: {x: -0.77, y: 0.77, z: 0.77}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -87,8 +89,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 2.5}
+  m_Size: {x: 4, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &114537671507664018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596683677151500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17495ceee59fb8f449e98cdd6d4088b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114642341071181606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,6 +116,22 @@ MonoBehaviour:
   health: 100
   currentHealth: 0
   pe: {fileID: 1857606070139930, guid: 2d3be96689adfde4996b65a53f0e2553, type: 2}
+--- !u!114 &114701269001453020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596683677151500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06836ddc1b73864e8b072ed69ea63da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  horizontallFollowSpeed: 0.1
+  verticalFollowSpeed: 0.1
+  followHorizontal: 0
+  followVertical: 1
 --- !u!114 &114800212186247582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf2e7ab1431c9e4f9b4d2bbfaf703d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
 --- !u!212 &212703666727693304
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -146,7 +175,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: efa8ccd935fcfe34ca406cfa309b39c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
