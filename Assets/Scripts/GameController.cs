@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Instantiate (Hero, Vector3.zero, new Quaternion(0f, 0f, 0f, 0f));
+
 	}
 	
 	// Update is called once per frame

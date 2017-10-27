@@ -27,27 +27,19 @@ public class AIFollowTarget : MonoBehaviour {
 
 	void FixedUpdate() {
 
-		float xMove = (followHorizontal) ? Mathf.Lerp (transform.position.x, target.position.x, horizontallFollowSpeed) : transform.position.x;
-		float yMove = (followVertical) ? Mathf.Lerp (transform.position.y, target.position.y, verticalFollowSpeed) : transform.position.y;
-		transform.position = new Vector2(xMove, yMove);
+		float range = 1f;
 
-		/**float range = 1f;
-		float rangeCenter = 0.1f;
-		float lockSpeed = 1f;
 		if (transform.position.y > target.position.y - range && transform.position.y < target.position.y + range) {
-			if (transform.position.y > target.position.y - rangeCenter && transform.position.y < target.position.y + rangeCenter) {
-				movement.move (0, 0);
-			} else if (transform.position.y > target.position.y) {
-				movement.move (0, -lockSpeed);
-			} else if (transform.position.y < target.position.y) {
-				movement.move (0, lockSpeed);
-			}
+			
+			float xMove = (followHorizontal) ? Mathf.Lerp (transform.position.x, target.position.x, 0.3f) : transform.position.x;
+			float yMove = (followVertical) ? Mathf.Lerp (transform.position.y, target.position.y, 0.3f) : transform.position.y;
+			transform.position = new Vector2(xMove, yMove);
 
 		} else if (target.position.y > transform.position.y) {
 			movement.move (0, 1f);
 		} else if (target.position.y < transform.position.y) {
 			movement.move (0, -1f);
-		}**/
+		}
 
 	}
 }

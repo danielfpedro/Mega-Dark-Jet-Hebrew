@@ -17,6 +17,8 @@ public class MainCamera : MonoBehaviour {
 
 		// Coloco o Z manualmente par deixar a camera na frente do cenario 
 		// transform.position = new Vector3 (transform.position.x, targetPosition.position.y, zPosition);
+		Camera camera = GetComponent<Camera>();
+		Debug.Log("Camera Pixel Width: " + camera.pixelWidth);
 	}
 
 	void Update(){

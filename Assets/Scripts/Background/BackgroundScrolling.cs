@@ -14,6 +14,11 @@ public class BackgroundScrolling : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = transform.GetComponent<Rigidbody2D> ();	
+
+		if (rb == null) {
+			rb = gameObject.AddComponent (typeof(Rigidbody2D)) as Rigidbody2D;
+			rb.bodyType = RigidbodyType2D.Kinematic;
+		}
 		gameController = GameController.instance;
 	}
 	

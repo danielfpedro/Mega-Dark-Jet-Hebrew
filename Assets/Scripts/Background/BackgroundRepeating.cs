@@ -4,55 +4,59 @@ using UnityEngine;
 
 public class BackgroundRepeating : MonoBehaviour {
 
-	private BoxCollider2D boxCollider;
-	private float xSize;
-	private Rigidbody2D rb;
-	private GameController gameController;
+	private Camera mainCamera;
+	private int lastPosition;
 
-	// public GameObject secondBackground;
+	private ScreenAlign screenAlign;
 
 	// Use this for initialization
 	void Start () {
-		/**boxCollider = GetComponent<BoxCollider2D> ();
-		xSize = boxCollider.size.x;**/
+		// rb = GetComponent<Rigidbody2D> ();
+		// gameController = GameController.instance;
 
-		rb = GetComponent<Rigidbody2D> ();
-		gameController = GameController.instance;
+		mainCamera = Camera.main;
+		lastPosition = transform.childCount - 1;
+
+		screenAlign = GetComponent<ScreenAlign> ();
 
 		RepositionBackground ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		// rb.velocity = Vector2.right * -30f;
-
 		int i = 0;
-		int totalChilds = transform.childCount;
-		Debug.Log ("Total Childs: " + totalChilds);
+
 		foreach (Transform child in transform) {
+
 			BoxCollider2D boxCollider = child.gameObject.GetComponent<BoxCollider2D> ();
 
-			if (child.transform.position.x < (-boxCollider.size.x * 2f)) {
-				float extra = totalChilds * 2f;
-				Debug.Log ("Aplicando offset " + extra + " para child " + i);
-				Vector2 offset = new Vector2 (boxCollider.size.x * extra, 0);
-				child.position = (Vector2) child.transform.position + offset;
+			Vector3 size = mainCamera.ScreenToWorldPoint (new Vector3 (0, 0, 5));
+
+			if (child.transform.position.x < (size.x - (boxCollider.size.x/2f))) {
+				screenAlign.PositionObjectSideBySide (transform.GetChild (lastPosition), child);
+				lastPosition = i;
 			}
 			i++;
 		}
-		/**if (transform.position.x < (-xSize * 2f)) {
-			RepositionBackground ();
-		}**/
 	}
 
 	private void RepositionBackground() {
 		int i = 0;
-		int totalChilds = transform.childCount;
+
+		foreach (Transform child in transform) {
+			if (child.gameObject.GetComponent<BoxCollider2D> () == null) {
+				child.gameObject.AddComponent<BoxCollider2D>();
+			}
+		}
+
 		foreach (Transform child in transform) {
 			BoxCollider2D boxCollider = child.gameObject.GetComponent<BoxCollider2D> ();
-			float xPosition = (i == 0) ? 0 : boxCollider.size.x * i * 2f;
-			child.position = new Vector2(xPosition, child.position.y);
+
+			if (i == 0) {
+				screenAlign.Positioning(child, 0, null);
+			} else {
+				screenAlign.PositionObjectSideBySide (transform.GetChild (i - 1), child);
+			}
 			i++;
 		}
 	}

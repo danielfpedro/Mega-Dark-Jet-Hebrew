@@ -12,7 +12,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 7b848b7feaa524953d09fc1851efa6da UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 7b848b7feaa524953d09fc1851efa6da UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-c58ee3f0d22c264b067b1b6f14855ae2 Assembly-CSharp.dll:.Weapon
+e1446d3edaf0be3b55e443ed23d55653 Assembly-CSharp.dll:.Weapon
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -108,7 +108,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
-ad1601f8198d696ba7ce0a93bc86b3b7 Assembly-CSharp.dll:.Bullet
+e06d6a45bb96cfd4932aa27e16e18419 Assembly-CSharp.dll:.Bullet
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.BackgroundScrolling
 1a5f1086530983fd0a237dde4ee17bf0 Assembly-CSharp.dll:.HealthManager
 d63abcea72f06cf671e6525d697fd7b9 Assembly-CSharp.dll:.HeroController
@@ -138,7 +138,9 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
 af3ab82b47f51e927b47d3d44666fdac Assembly-CSharp.dll:.EnemyWave
+daf3799c95e9e9386f57c37683c2eda4 Assembly-CSharp.dll:.ScreenAlign
 d18c33edcaacdc156f492b974381a4ea Assembly-CSharp.dll:.MainCamera
 77f7440e8f4da80d8eaa9681509617ea Assembly-CSharp.dll:.AIFollowTarget
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Enemy
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackgroundRepeating
+0f943198429c93609e841212d11b4efc Assembly-CSharp.dll:.BulletSpaw

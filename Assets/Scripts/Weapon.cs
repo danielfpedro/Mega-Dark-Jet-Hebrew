@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
-	public GameObject bullet;
-	public Transform shotSpaw;
+	public Transform Spaws;
 	public float fireRate = 0.1f;
 
 	private float nextFire;
@@ -19,7 +18,10 @@ public class Weapon : MonoBehaviour {
 	void Update () {
 		if (Input.GetButton("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			GameObject shot = Instantiate (bullet, shotSpaw.position, shotSpaw.rotation) as GameObject;
+
+			foreach (Transform spaw in Spaws) {
+				spaw.gameObject.GetComponent<BulletSpaw> ().shot();
+			}
 		}
 	}
 }
