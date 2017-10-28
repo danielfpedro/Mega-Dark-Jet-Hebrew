@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\BulletSpaw.cs" />
+     <Compile Include="Assets\DamageText.cs" />
+     <Compile Include="Assets\DamageTextController.cs" />
      <Compile Include="Assets\Scripts\AIFollowTarget.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundRepeating.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundScrolling.cs" />

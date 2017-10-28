@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-	public float speed = 10f;
-	public float gravityScale = 0f;
-	public int damage = 40;
+	public float force = 10f;
+	public float damage = 40f;
 
 	private Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start () {
 		Rigidbody2D rb = GetComponent<Rigidbody2D> ();
-		// rb.velocity = new Vector2(speed, 0f);
-		rb.gravityScale = gravityScale;
-		rb.AddRelativeForce (Vector2.right * speed);
+		rb.AddRelativeForce (Vector2.right * force);
 	}
 	
 	// Update is called once per frame
@@ -25,11 +22,8 @@ public class Bullet : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Enemy") {
-			foreach(ContactPoint2D contact in coll.contacts) {
-
-				contact.collider.gameObject.GetComponent<HealthManager> ().Hurt (damage, contact.point);
-				Destroy (gameObject);	
-			}
+			coll.gameObject.GetComponent<HealthManager> ().Hurt (Mathf.Round(Random.Range(1f, 10f)), coll.contacts);
+			Destroy (gameObject);	
 		}
 	}
 }

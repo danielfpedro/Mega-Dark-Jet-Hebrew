@@ -352,7 +352,7 @@ MonoBehaviour:
     xMax: 24
     yMin: -7
     yMax: 7
-  speed: 25
+  speed: 8
   selectedWeapon: 0
   isPlayer: 1
   weapons: {fileID: 4401413694593904}

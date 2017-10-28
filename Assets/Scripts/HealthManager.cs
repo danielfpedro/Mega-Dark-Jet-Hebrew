@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour {
 
-	public int health = 100;
-	public int currentHealth;
+	public Image healthBar;
+	public GameObject damageText;
 
-	public GameObject pe;
+	public float health = 100;
+	[HideInInspector]
+	public float currentHealth;
 
 	// Use this for initialization
 	void Start () {
@@ -17,18 +21,20 @@ public class HealthManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth < 1) {
-			Destroy (gameObject);
+			KillIt ();
 		}
 	}
 
 	public void KillIt() {
-		currentHealth = 0;
+		Destroy (gameObject);
 	}
 
-	public void Hurt(int damage, Vector2 point) {
-
-		Instantiate (pe, point, transform.rotation);
-
+	public void Hurt(float damage, ContactPoint2D[] contacts) {
+		Debug.Log ("You Hurted me");
 		currentHealth -= damage;
+		healthBar.fillAmount = currentHealth / health;
+
+		GameObject damageTextClone = Instantiate (damageText, transform);
+		damageTextClone.GetComponent<DamageTextController> ().text.SetText (damage);
 	}
 }
