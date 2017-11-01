@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class HeroBoundary
 {
-	public float xMin, xMax, yMin, yMax;
+	public float xMinOffset, xMaxOffset, yMinOffset, yMaxOffset;
 }
 
 public class HeroController : MonoBehaviour {
@@ -21,10 +21,13 @@ public class HeroController : MonoBehaviour {
 
 	private Rigidbody2D rb;
 
+	private Camera mainCamera;
+
 	public bool canMove;
 
 	// Use this for initialization
 	void Start () {
+		mainCamera = Camera.main;
 		rb = GetComponent<Rigidbody2D> ();
 
 		canMove = true;
@@ -50,9 +53,10 @@ public class HeroController : MonoBehaviour {
 	void FixedUpdate () {
 		move ();
 
+		Vector3 screenWorldPoint = Camera.main.ScreenToWorldPoint(new Vector3(0,0, 0.5f));
 		rb.position = new Vector2 (
-			Mathf.Clamp(rb.position.x, heroBoundary.xMin, heroBoundary.xMax),
-			Mathf.Clamp(rb.position.y, heroBoundary.yMin, heroBoundary.yMax)
+			Mathf.Clamp(rb.position.x, screenWorldPoint.x + heroBoundary.xMinOffset, Mathf.Abs(screenWorldPoint.x) - heroBoundary.xMaxOffset),
+			Mathf.Clamp(rb.position.y, screenWorldPoint.y + heroBoundary.yMinOffset, Mathf.Abs(screenWorldPoint.y) - heroBoundary.yMaxOffset)
 		);
 	}
 

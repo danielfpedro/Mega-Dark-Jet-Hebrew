@@ -46,6 +46,8 @@ public class BackgroundRepeating : MonoBehaviour {
 		foreach (Transform child in transform) {
 			if (child.gameObject.GetComponent<BoxCollider2D> () == null) {
 				child.gameObject.AddComponent<BoxCollider2D>();
+				BoxCollider2D boxCollider = child.GetComponent<BoxCollider2D> ();
+				boxCollider.isTrigger = true;
 			}
 		}
 

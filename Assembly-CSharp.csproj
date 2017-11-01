@@ -51,9 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AIDown.cs" />
      <Compile Include="Assets\BulletSpaw.cs" />
+     <Compile Include="Assets\ComboController.cs" />
      <Compile Include="Assets\DamageText.cs" />
      <Compile Include="Assets\DamageTextController.cs" />
+     <Compile Include="Assets\EnemySpawDown.cs" />
+     <Compile Include="Assets\EventTriggerTest.cs" />
+     <Compile Include="Assets\KillCounter.cs" />
      <Compile Include="Assets\Scripts\AIFollowTarget.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundRepeating.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundScrolling.cs" />
@@ -62,12 +67,15 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\EnemyWave.cs" />
+     <Compile Include="Assets\Scripts\EventManager.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\HealthManager.cs" />
      <Compile Include="Assets\Scripts\HeroController.cs" />
      <Compile Include="Assets\Scripts\MainCamera.cs" />
      <Compile Include="Assets\Scripts\ScreenAlign.cs" />
+     <Compile Include="Assets\Scripts\TestEvent.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
+     <Compile Include="Assets\TimeCounter.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -26,6 +26,10 @@ public class HealthManager : MonoBehaviour {
 	}
 
 	public void KillIt() {
+		if (gameObject.tag == "Enemy") {
+			EventManager.TriggerEvent ("enemyKilled");
+			Debug.Log ("Inimigo Morreu!");
+		}
 		Destroy (gameObject);
 	}
 
@@ -34,7 +38,7 @@ public class HealthManager : MonoBehaviour {
 		currentHealth -= damage;
 		healthBar.fillAmount = currentHealth / health;
 
-		GameObject damageTextClone = Instantiate (damageText, transform);
-		damageTextClone.GetComponent<DamageTextController> ().text.SetText (damage);
+		//GameObject damageTextClone = Instantiate (damageText, transform);
+		//damageTextClone.GetComponent<DamageTextController> ().text.SetText (damage);
 	}
 }

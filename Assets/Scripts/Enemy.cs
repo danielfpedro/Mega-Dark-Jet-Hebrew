@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour {
 
 	private Rigidbody2D rb;
 
+	public GameObject p;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
@@ -14,7 +16,7 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.DrawRay (new Vector2(transform.position.x, transform.position.y), -Vector2.right * 30f, Color.green);
+		// Debug.DrawRay (new Vector2(transform.position.x, transform.position.y), -Vector2.right * 30f, Color.green);
 	}
 
     void FixedUpdate() {
