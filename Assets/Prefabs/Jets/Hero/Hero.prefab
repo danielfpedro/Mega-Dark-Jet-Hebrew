@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4145934714510734}
   - component: {fileID: 212898176239267326}
   - component: {fileID: 114770467363916032}
+  - component: {fileID: 114657436337598816}
   m_Layer: 0
   m_Name: Magma
   m_TagString: Untagged
@@ -87,6 +88,8 @@ GameObject:
   - component: {fileID: 61754175283374808}
   - component: {fileID: 114604866264997302}
   - component: {fileID: 114414391225689358}
+  - component: {fileID: 114021542947153418}
+  - component: {fileID: 114526308791083088}
   m_Layer: 11
   m_Name: Hero
   m_TagString: Hero
@@ -172,7 +175,7 @@ Transform:
   m_GameObject: {fileID: 1774222345732200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.3, y: 0, z: -1}
-  m_LocalScale: {x: 0.4406955, y: 0.4406955, z: -1}
+  m_LocalScale: {x: 0.33492857, y: 0.33492857, z: -0.76}
   m_Children:
   - {fileID: 4401413694593904}
   - {fileID: 4746636266355114}
@@ -237,6 +240,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.982166, y: 2.5374727}
   m_EdgeRadius: 0
+--- !u!114 &114021542947153418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1774222345732200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d6d39e62d29934abec50f59555996d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114414391225689358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -251,7 +265,23 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   damageText: {fileID: 0}
   health: 100
+  effects:
+    dieByExplosion: {fileID: 0}
   currentHealth: 0
+--- !u!114 &114526308791083088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1774222345732200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff069c3fc7d6ba43a6eb58b4003065d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jetEffects:
+    piercingHit: {fileID: 0}
 --- !u!114 &114604866264997302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,16 +293,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db31168c7d794a46b8c28df8b8cdd03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroBoundary:
-    xMinOffset: 1.5
-    xMaxOffset: 3.5
+  playerBoundary:
+    xMinOffset: 2
+    xMaxOffset: 5
     yMinOffset: 1
     yMaxOffset: 1
-  speed: 8
-  selectedWeapon: 0
-  isPlayer: 1
-  weapons: {fileID: 4401413694593904}
-  canMove: 1
+--- !u!114 &114657436337598816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1145861549119898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92204f41a65dfba4a8010d2d78a3edcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114770467363916032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,9 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188fc12cecdc20d4ca3fa19a346aafb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1174695442695922, guid: a42feaf5c19f4e9468f71cf6c6ed1d92, type: 2}
-  force: 50
-  facingRight: 1
+  ammo: {fileID: 1174695442695922, guid: a42feaf5c19f4e9468f71cf6c6ed1d92, type: 2}
+  force: 200
 --- !u!212 &212398269082212044
 SpriteRenderer:
   m_ObjectHideFlags: 1

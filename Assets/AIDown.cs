@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(JetController))]
 public class AIDown : MonoBehaviour {
 
+    private JetController jetController;
 
-	Transform weapon;
+    Transform weapon;
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<EnemyMovement> ().move (0, -1f);
-
+        jetController = GetComponent<JetController>();
 		// weapon = transform.Find ("Weapons").GetChild (0);
 
 		// InvokeRepeating ("Shot", Random.Range(1f, 1.5f), Random.Range(1f, 1.5f));
@@ -21,7 +22,12 @@ public class AIDown : MonoBehaviour {
 		
 	}
 
-	/**private void Shot() {
+    private void FixedUpdate()
+    {
+        jetController.move(0f, -1f);
+    }
+
+    /**private void Shot() {
 		weapon.GetComponent<Weapon>().Shot ();
 	}**/
 }

@@ -4,36 +4,42 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-	public float force = 10f;
-	public float damage = 40f;
+    public enum Types
+    {
+        piercing,
+        explosive
+    }
+
+    public float force = 10f;
+	public float damage = 50f;
+    public Types type;
 
 	private Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start () {
-		// Rigidbody2D rb = GetComponent<Rigidbody2D> ();
-		//rb.AddRelativeForce (transform.parent.transform.forward * force);
+		
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.GetComponent<HealthManager> () != null) {
-			coll.gameObject.GetComponent<HealthManager> ().Hurt (Mathf.Round(Random.Range(1f, 10f)), coll.contacts);	
+			coll.gameObject.GetComponent<HealthManager> ().DoDamage (Mathf.Round(Random.Range(damage, damage)), coll.contacts);	
 
-			/**GameObject p = coll.collider.gameObject.GetComponent<Enemy> ().p;
-			p.transform.position = new Vector3 (p.transform.position.x, p.transform.position.y, coll.transform.position.z + 1f);
-
+			// GameObject p = coll.collider.gameObject.GetComponent<Enemy> ().p;
+			//p.transform.position = new Vector3 (p.transform.position.x, p.transform.position.y, coll.transform.position.z + 1f);
+            /**
 			Vector2 hitPoint = coll.contacts[0].point;
-			Instantiate(p, new Vector3(hitPoint.x, hitPoint.y, 0), p.transform.rotation);**/
-		}	
+			GameObject pClone = Instantiate(p, new Vector3(hitPoint.x, hitPoint.y, 0), p.transform.rotation);
+            Destroy(pClone, pClone.GetComponent<ParticleSystem>().main.duration);**/
+		}
 		if (coll.gameObject.tag == "Enemy") {
 			EventManager.TriggerEvent ("enemyHit");
 		}
 
-		Destroy (gameObject);	
+		Destroy (gameObject);
 	}
 }

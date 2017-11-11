@@ -25,7 +25,7 @@ public class KillCounter : MonoBehaviour {
 		timer += Time.deltaTime;
 		combobreakTimer = timer;
 
-		Debug.Log ("Timer in seconds" + combobreakTimer);
+		// Debug.Log ("Timer in seconds" + combobreakTimer);
 	
 		bar.fillAmount = (totalKills < 1) ? 1f : combobreakTimer / combobreakDeadline;
 

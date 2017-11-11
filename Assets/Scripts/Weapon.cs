@@ -16,15 +16,14 @@ public class Weapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButton("Fire1") && Time.time > nextFire) {
-			nextFire = Time.time + fireRate;
-			Shot ();
-		}
 	}
 
 	public void Shot() {
-		foreach (Transform spaw in Spaws) {
-			spaw.gameObject.GetComponent<BulletSpaw> ().Shot();
+		if (Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
+			foreach(Transform spaw in Spaws) {
+                spaw.GetComponent<BulletSpaw>().Shot();
+			}
 		}
 	}
 }
