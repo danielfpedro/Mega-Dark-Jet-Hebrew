@@ -44,9 +44,7 @@ public class JetController : MonoBehaviour {
 
             if (coll.gameObject.GetComponent<Bullet>().type == 0 && jetEffects.piercingHit)
             {
-                GameObject clone = Instantiate(jetEffects.piercingHit, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity) as GameObject;
-                float deathDelay = clone.GetComponent<ParticleSystem>().main.duration;
-                Destroy(clone, deathDelay);
+                Instantiate(jetEffects.piercingHit, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
             }    
         }
     }

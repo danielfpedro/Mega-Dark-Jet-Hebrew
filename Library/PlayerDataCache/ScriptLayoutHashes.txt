@@ -16,6 +16,7 @@ c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.T
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ScriptingExample
 4c75752238fd236ce350bb4f9dc2936d Assembly-CSharp.dll:Cinemachine.CinemachineFollowZoom
 e1446d3edaf0be3b55e443ed23d55653 Assembly-CSharp.dll:.Weapon
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WeaponInput
 197d4eb2be50dae6e083e910f9a35a5a Assembly-CSharp.dll:.CinemachineExampleWindow
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -113,6 +114,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+c24a1855a93f34aa90a50d1e2b3523ae Assembly-CSharp.dll:.JetController
 7947de6667d66be61529d5123fe245da Assembly-CSharp.dll:Cinemachine.CinemachineFreeLook
 1c859dfdbbcb0df99ff62d9e20d40887 Assembly-CSharp.dll:.GunShoot
 acbc5cb550fd73551fc3f7462a1c830c Assembly-CSharp.dll:Cinemachine.NoiseSettings
@@ -125,14 +127,14 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 7b848b7feaa524953d09fc1851efa6da Assembly-CSharp.dll:Cinemachine.Timeline.CinemachineTrack
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TimeCounter
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ComboController
-f0f9f193c539e10abb8fd8b64512508b Assembly-CSharp.dll:.Bullet
+7ab1bd9690715f4a5176da42ce4ce78b Assembly-CSharp.dll:.Bullet
 b7536247a550bc1596505b7f345c8adf Assembly-CSharp.dll:.GunAim
 93176f3f3453ecb525d6ed31655250ae Assembly-CSharp.dll:Cinemachine.CinemachineOrbitalTransposer
 3ee13e5e8ad052d9ef2367701b0a631c Assembly-CSharp.dll:Cinemachine.CinemachineComposer
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.BackgroundScrolling
 e976c020b6e9787a0403f59ea5b7cff1 Assembly-CSharp.dll:Cinemachine.CinemachineTrackedDolly
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Cinemachine.CinemachinePipeline
-d337d4c496f26d91ca79f77a847c745f Assembly-CSharp.dll:.HealthManager
+5a87cc6abb1de399c7794c6ac61c02a9 Assembly-CSharp.dll:.HealthManager
 6a951491f6c41b5b548249e03e6ad6eb Assembly-CSharp.dll:.EnemySpawDown
 7bab6475392308026b9eff8dc8aa493f Assembly-CSharp.dll:Cinemachine.CinemachinePath
 f5b39779a0687de8280a96957c45dd5e Assembly-CSharp.dll:.PlayerController
@@ -176,11 +178,13 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 91333b98e294432cb6bbf7c67b32b260 Assembly-CSharp.dll:.ExtinguishableFire
 af3ab82b47f51e927b47d3d44666fdac Assembly-CSharp.dll:.EnemyWave
 daf3799c95e9e9386f57c37683c2eda4 Assembly-CSharp.dll:.ScreenAlign
-d06da0d9916a0883b082e894f0bf0e52 Assembly-CSharp.dll:.BulletSpaw
+85b6ac8fad7c12de9a97ebf780e7aeb0 Assembly-CSharp.dll:.BulletSpaw
 f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
 493a938d60ddc40e53c31553ab96a7e5 Assembly-CSharp.dll:.KillCounter
 d18c33edcaacdc156f492b974381a4ea Assembly-CSharp.dll:.MainCamera
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ParticleSystemAutoDestroy
 77f7440e8f4da80d8eaa9681509617ea Assembly-CSharp.dll:.AIFollowTarget
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerInput
 47e7ad8e0df35fc99b76b06faa63c661 Assembly-CSharp.dll:.Enemy
 fa13a1b0ff073fa1b299c99b81377ef1 Assembly-CSharp.dll:Cinemachine.CinemachineBrain
 83cf8d445f7f66fde23b3753171acb45 Assembly-CSharp.dll:Cinemachine.CinemachineBasicMultiChannelPerlin
@@ -188,6 +192,4 @@ fa13a1b0ff073fa1b299c99b81377ef1 Assembly-CSharp.dll:Cinemachine.CinemachineBrai
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DamageText
 06d24c1ff2618999b23f770a2654de51 Assembly-CSharp.dll:Cinemachine.CinemachineClearShot
 98bbf0f63dd394ba1c7e54747c4ab8de Assembly-CSharp.dll:.DamageTextController
-c24a1855a93f34aa90a50d1e2b3523ae Assembly-CSharp.dll:.JetController
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerInput
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WeaponInput
+2b66076c755eac1a8b0c3f71b9ae5bdb Assembly-CSharp.dll:.HealthBar

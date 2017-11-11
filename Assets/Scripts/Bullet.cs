@@ -11,7 +11,10 @@ public class Bullet : MonoBehaviour {
     }
 
     public float force = 10f;
-	public float damage = 50f;
+
+    // Não mostra no inspector pq o spawner
+    // que vai dizer quanto tem de dano pq tem upgrade na arma e tal
+	public float damage;
     public Types type;
 
 	private Rigidbody2D rb;

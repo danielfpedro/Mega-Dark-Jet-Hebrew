@@ -18,10 +18,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		mainCamera = Camera.main;
-		rb = GetComponent<Rigidbody2D> ();
-
-		// canMove = true;
-		//selectWeapon ();
+		rb = GetComponent<Rigidbody2D> (); 
 	}
 
 	void Update() {

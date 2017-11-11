@@ -12,19 +12,28 @@ public class HealthEffects
 
 public class HealthManager : MonoBehaviour {
 
-	public Image healthBar;
-	public GameObject damageText;
+    [HeaderAttribute("Health Bar")]
+    public GameObject healthBar;
+    public Transform healthBarPosition;
 
 	public float health = 100;
     public HealthEffects effects;
 
     [HideInInspector]
 	public float currentHealth;
+
+    private float timer;
     
 
 	// Use this for initialization
 	void Start () {
 		currentHealth = health;
+
+        if (healthBar)
+        {
+            healthBar = Instantiate(healthBar, healthBarPosition.position, healthBarPosition.rotation);
+            healthBar.transform.SetParent(transform);
+        }
 	}
 	
 	// Update is called once per frame
@@ -32,15 +41,13 @@ public class HealthManager : MonoBehaviour {
 		if (currentHealth < 0.1f) {
 			KillIt ();
 		}
-	}
+    }
 
-	public void KillIt() {
+    public void KillIt() {
 		if (gameObject.tag == "Enemy") {
             if (effects.dieByExplosion)
             {
-                GameObject explosion = Instantiate(effects.dieByExplosion, new Vector3(transform.position.x, transform.position.y, transform.position.z - 50f), transform.rotation);
-                float deathDelay = explosion.GetComponent<ParticleSystem>().main.duration;
-                Destroy(explosion, deathDelay);
+                Instantiate(effects.dieByExplosion, new Vector3(transform.position.x, transform.position.y, transform.position.z - 50f), transform.rotation);
             }
             EventManager.TriggerEvent("enemyKilled");
         }
@@ -51,9 +58,12 @@ public class HealthManager : MonoBehaviour {
 
 	public void DoDamage(float damage, ContactPoint2D[] contacts) {
 		currentHealth -= damage;
-		healthBar.fillAmount = currentHealth / health;
+		healthBar.GetComponent<HealthBar>().healthbar.fillAmount = currentHealth / health;
 
-		//GameObject damageTextClone = Instantiate (damageText, transform);
-		//damageTextClone.GetComponent<DamageTextController> ().text.SetText (damage);
-	}
+        if (healthBar)
+        {
+            healthBar.GetComponent<HealthBar>().ShowHeatlhBar();
+        }
+        
+    }
 }

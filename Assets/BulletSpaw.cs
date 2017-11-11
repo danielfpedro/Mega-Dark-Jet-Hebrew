@@ -6,6 +6,7 @@ public class BulletSpaw : MonoBehaviour {
 
 	public GameObject ammo;
 	public float force = 150f;
+    public float damage = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class BulletSpaw : MonoBehaviour {
 
 	public void Shot() {
         GameObject shot = Instantiate(ammo, transform.position, transform.rotation) as GameObject;
+        shot.GetComponent<Bullet>().damage = damage;
         Rigidbody2D ammoRb = shot.GetComponent<Rigidbody2D>();
         ammoRb.AddForce(Vector2.right * force);
 

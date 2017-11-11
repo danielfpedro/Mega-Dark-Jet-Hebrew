@@ -106,8 +106,10 @@
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
      <Compile Include="Assets\EnemySpawDown.cs" />
      <Compile Include="Assets\EventTriggerTest.cs" />
+     <Compile Include="Assets\HealthBar.cs" />
      <Compile Include="Assets\JetController.cs" />
      <Compile Include="Assets\KillCounter.cs" />
+     <Compile Include="Assets\ParticleSystemAutoDestroy.cs" />
      <Compile Include="Assets\PlayerInput.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
