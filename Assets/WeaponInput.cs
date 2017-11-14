@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Weapon))]
+[RequireComponent(typeof(WeaponController))]
 public class WeaponInput : MonoBehaviour {
 
-    private Weapon weapon;
+    private WeaponController weapon;
 
 	// Use this for initialization
 	void Start () {
-        weapon = GetComponent<Weapon>();
+        weapon = GetComponent<WeaponController>();
 	}
 
     void Update()

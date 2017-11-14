@@ -104,6 +104,7 @@
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+     <Compile Include="Assets\EnemyJetAI.cs" />
      <Compile Include="Assets\EnemySpawDown.cs" />
      <Compile Include="Assets\EventTriggerTest.cs" />
      <Compile Include="Assets\HealthBar.cs" />
@@ -159,7 +160,7 @@
      <Compile Include="Assets\Scripts\Background\BackgroundRepeating.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundScrolling.cs" />
      <Compile Include="Assets\Scripts\Boundary.cs" />
-     <Compile Include="Assets\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Scripts\BulletController.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\EnemyWave.cs" />
@@ -170,7 +171,7 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ScreenAlign.cs" />
      <Compile Include="Assets\Scripts\TestEvent.cs" />
-     <Compile Include="Assets\Scripts\Weapon.cs" />
+     <Compile Include="Assets\Scripts\WeaponController.cs" />
      <Compile Include="Assets\TimeCounter.cs" />
      <Compile Include="Assets\WeaponInput.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />

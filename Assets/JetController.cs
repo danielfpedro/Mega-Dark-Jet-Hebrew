@@ -8,7 +8,8 @@ public class JetEffects
 	public GameObject piercingHit;
 }
 
-[RequireComponent(typeof(HealthManager))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class JetController : MonoBehaviour {
 
     public float speed = 10f;
@@ -16,8 +17,9 @@ public class JetController : MonoBehaviour {
     private Rigidbody2D rb;
     public JetEffects jetEffects;
 
-    void Start () {
+    void Start() {
         rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Kinematic;
     }
 	
 	void Update () {
@@ -38,11 +40,9 @@ public class JetController : MonoBehaviour {
         {
             // Como é 2d e o tiro sempre vem de frente não precisa
             // fazer um loop sobre os contatos.. só pega o primeiro e está ótimo
-
             Vector2 hitPoint = coll.contacts[0].point;
-            Debug.Log("Bullet Type " + coll.gameObject.GetComponent<Bullet>().type);
 
-            if (coll.gameObject.GetComponent<Bullet>().type == 0 && jetEffects.piercingHit)
+            if (coll.gameObject.GetComponent<BulletController>().type == 0 && jetEffects.piercingHit)
             {
                 Instantiate(jetEffects.piercingHit, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
             }    
