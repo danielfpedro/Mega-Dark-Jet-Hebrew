@@ -19,11 +19,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4299721099251894}
+  - component: {fileID: 114314658450619326}
   - component: {fileID: 212233044630909504}
   - component: {fileID: 61220074613047554}
   - component: {fileID: 50202708337387398}
   - component: {fileID: 114361968370064960}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: USA3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -38,13 +39,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4453479159396124}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1701934398513116
 GameObject:
   m_ObjectHideFlags: 1
@@ -54,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4895704231440428}
   - component: {fileID: 114699432423809812}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,9 +71,24 @@ GameObject:
   m_Component:
   - component: {fileID: 4477903420100016}
   - component: {fileID: 114891201589594618}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Pinch
   m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1940936805849170
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4621894704743448}
+  m_Layer: 12
+  m_Name: Spaws
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1076843814671588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.38, y: 3.31, z: 0}
+  m_LocalPosition: {x: 1.94, y: -0.11, z: 1}
   m_LocalScale: {x: 3.4324498, y: 3.4324503, z: 3.4324503}
   m_Children:
   - {fileID: 4453479159396124}
@@ -115,8 +131,22 @@ Transform:
   m_LocalPosition: {x: 0.405, y: -0.337, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4895704231440428}
+  - {fileID: 4621894704743448}
   m_Father: {fileID: 4453479159396124}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4621894704743448
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940936805849170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4895704231440428}
+  m_Father: {fileID: 4477903420100016}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4895704231440428
@@ -129,7 +159,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4477903420100016}
+  m_Father: {fileID: 4621894704743448}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50202708337387398
@@ -177,6 +207,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.97, y: 0.51}
   m_EdgeRadius: 0
+--- !u!114 &114314658450619326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076843814671588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c896fae2896b94f9f551ba995b9413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: USA 3 The Greater
 --- !u!114 &114361968370064960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,8 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188fc12cecdc20d4ca3fa19a346aafb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: {fileID: 1354602873993414, guid: 1e42af8b68f1d37498f91f04d9c64104, type: 2}
-  force: 150
+  target: {fileID: 0}
+  ammo: {fileID: 1202764852976842, guid: 87e0f3802a390d74eac4c746fbe995d7, type: 2}
+  force: 10
   damage: 5
 --- !u!114 &114891201589594618
 MonoBehaviour:
@@ -216,8 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad90adf0c22698448aaba40e42e776b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaws: {fileID: 4621894704743448}
   fireRate: 0.1
-  facingRight: 1
 --- !u!212 &212233044630909504
 SpriteRenderer:
   m_ObjectHideFlags: 1

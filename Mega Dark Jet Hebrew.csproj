@@ -78,8 +78,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AIDown.cs" />
-    <Compile Include="Assets\BulletSpaw.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineCollider.cs" />
@@ -121,9 +119,6 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\ComboController.cs" />
-    <Compile Include="Assets\DamageText.cs" />
-    <Compile Include="Assets\DamageTextController.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -131,16 +126,6 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-    <Compile Include="Assets\EnemyJetAI.cs" />
-    <Compile Include="Assets\EnemySpawDown.cs" />
-    <Compile Include="Assets\EventTriggerTest.cs" />
-    <Compile Include="Assets\FlameThrowerController.cs" />
-    <Compile Include="Assets\HealthBar.cs" />
-    <Compile Include="Assets\HomingMissile.cs" />
-    <Compile Include="Assets\JetController.cs" />
-    <Compile Include="Assets\KillCounter.cs" />
-    <Compile Include="Assets\ParticleSystemAutoDestroy.cs" />
-    <Compile Include="Assets\PlayerInput.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -185,25 +170,45 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+    <Compile Include="Assets\Scripts\AIDown.cs" />
     <Compile Include="Assets\Scripts\AIFollowTarget.cs" />
     <Compile Include="Assets\Scripts\Background\BackgroundRepeating.cs" />
     <Compile Include="Assets\Scripts\Background\BackgroundScrolling.cs" />
     <Compile Include="Assets\Scripts\Boundary.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
+    <Compile Include="Assets\Scripts\BulletSpaw.cs" />
+    <Compile Include="Assets\Scripts\ComboController.cs" />
+    <Compile Include="Assets\Scripts\DamageText.cs" />
+    <Compile Include="Assets\Scripts\DamageTextController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\EnemyJetAI.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawDown.cs" />
     <Compile Include="Assets\Scripts\EnemyWave.cs" />
     <Compile Include="Assets\Scripts\EventManager.cs" />
+    <Compile Include="Assets\Scripts\EventTriggerTest.cs" />
+    <Compile Include="Assets\Scripts\FlameThrowerController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\HealthManager.cs" />
+    <Compile Include="Assets\Scripts\HomingMissile.cs" />
+    <Compile Include="Assets\Scripts\HomingMissileAim.cs" />
+    <Compile Include="Assets\Scripts\JetController.cs" />
+    <Compile Include="Assets\Scripts\KillCounter.cs" />
+    <Compile Include="Assets\Scripts\LaserAim.cs" />
     <Compile Include="Assets\Scripts\MainCamera.cs" />
+    <Compile Include="Assets\Scripts\MissileController.cs" />
+    <Compile Include="Assets\Scripts\MissileDelayedController.cs" />
+    <Compile Include="Assets\Scripts\ObjectProfile.cs" />
+    <Compile Include="Assets\Scripts\ParticleSystemAutoDestroy.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\ScreenAlign.cs" />
     <Compile Include="Assets\Scripts\ScreenAlignHelper.cs" />
     <Compile Include="Assets\Scripts\TestEvent.cs" />
+    <Compile Include="Assets\Scripts\TimeCounter.cs" />
     <Compile Include="Assets\Scripts\WeaponController.cs" />
-    <Compile Include="Assets\TimeCounter.cs" />
-    <Compile Include="Assets\WeaponInput.cs" />
+    <Compile Include="Assets\Scripts\WeaponInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\license.txt" />

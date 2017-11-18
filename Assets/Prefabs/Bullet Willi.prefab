@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212643320173877906}
   - component: {fileID: 61877588244327990}
   - component: {fileID: 50324637091185340}
-  - component: {fileID: 114709236038383074}
+  - component: {fileID: 114119949017448600}
   m_Layer: 9
   m_Name: Bullet Willi
   m_TagString: Bullet
@@ -54,10 +54,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -72,7 +72,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.0069122314}
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 1.8802967}
   m_EdgeRadius: 0
---- !u!114 &114709236038383074
+--- !u!114 &114119949017448600
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,15 +96,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503545237046048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e71094467f2588f458912adb6af46991, type: 3}
+  m_Script: {fileID: 11500000, guid: e73aac3d0307e0c41a1c997b35439fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  force: 0
-  rotateSpeed: 400
-  facingRight: 0
-  type: 0
-  target: {fileID: 0}
+  speed: 10
+  gravityScale: 5
 --- !u!212 &212643320173877906
 SpriteRenderer:
   m_ObjectHideFlags: 1

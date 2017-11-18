@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour {
 
-	public float fireRate = 0.1f;
-    public bool facingRight = true;
+    public Transform spaws;
+    public float fireRate = 0.1f;
+    // public bool facingRight = true;
 
 	private float nextFire;
 
@@ -21,7 +22,8 @@ public class WeaponController : MonoBehaviour {
 	public void Shot() {
 		if (Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			foreach(Transform spaw in transform) {
+
+			foreach(Transform spaw in spaws) {
                 spaw.SendMessage("Shot");
 			}
 		}

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4754362531350500, guid: 8b6a07312ffd74d4b8ec11eccb9a7cc2, type: 2}
-  speed: 5
+  speed: 100
   rotateSpeed: 200
 --- !u!114 &114811522660990002
 MonoBehaviour:
@@ -115,11 +115,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  force: 5
-  rotateSpeed: 200
-  facingRight: 0
+  speed: 0
   type: 0
-  target: {fileID: 4754362531350500, guid: 8b6a07312ffd74d4b8ec11eccb9a7cc2, type: 2}
 --- !u!212 &212775051383067286
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -5,8 +5,10 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
 	public static GameController instance;
-	public GameObject player;
+	public GameObject playerRef;
     public Transform playerSpaw;
+
+    public GameObject player;
 
 	public float heroSpeed = 10f;
 
@@ -21,8 +23,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Instantiate (player, playerSpaw.position, playerSpaw.rotation);
-
+        // player = Instantiate(player, playerSpaw.position, playerSpaw.rotation) as GameObject;
 	}
 	
 	// Update is called once per frame

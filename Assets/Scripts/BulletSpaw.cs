@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BulletSpaw : MonoBehaviour {
 
+    public Transform target;
+
 	public GameObject ammo;
 	public float force = 150f;
     public float damage = 5f;
@@ -20,6 +22,12 @@ public class BulletSpaw : MonoBehaviour {
 	public void Shot() {
         bool facingRight = (transform.root.localScale.x >= 0);
         GameObject shot = Instantiate(ammo, transform.position, transform.rotation) as GameObject;
+
+        HomingMissile shotHoming = shot.GetComponent<HomingMissile>();
+        if (shotHoming)
+        {
+            shotHoming.target = target;
+        }
 
         /**BulletController shotController = shot.GetComponent<BulletController>();
         shotController.damage = damage;

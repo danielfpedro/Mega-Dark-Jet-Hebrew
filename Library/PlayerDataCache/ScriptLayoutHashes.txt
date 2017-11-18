@@ -1,5 +1,6 @@
 WindowsStandalone
 4290e820af3bfe958137e34e5770725b Assembly-CSharp.dll:Cinemachine.CinemachineStateDrivenCamera
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FlameThrowerController
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -15,7 +16,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ScriptingExample
 4c75752238fd236ce350bb4f9dc2936d Assembly-CSharp.dll:Cinemachine.CinemachineFollowZoom
-d1974eb775f709defe4046424576d2e6 Assembly-CSharp.dll:.WeaponController
+eddc619686f924a760f1e73cf86e75c5 Assembly-CSharp.dll:.WeaponController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WeaponInput
 197d4eb2be50dae6e083e910f9a35a5a Assembly-CSharp.dll:.CinemachineExampleWindow
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -128,7 +129,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 7b848b7feaa524953d09fc1851efa6da Assembly-CSharp.dll:Cinemachine.Timeline.CinemachineTrack
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TimeCounter
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ComboController
-9899b923cc9bab8e02fecf6e33ffedec Assembly-CSharp.dll:.BulletController
+eeb6bd6260884589300f3305ab88c5ef Assembly-CSharp.dll:.BulletController
 b7536247a550bc1596505b7f345c8adf Assembly-CSharp.dll:.GunAim
 93176f3f3453ecb525d6ed31655250ae Assembly-CSharp.dll:Cinemachine.CinemachineOrbitalTransposer
 3ee13e5e8ad052d9ef2367701b0a631c Assembly-CSharp.dll:Cinemachine.CinemachineComposer
@@ -160,7 +161,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d3fdb5c6a383543f077a9aa4b27ce8c8 Assembly-CSharp.dll:Cinemachine.Blackboard.Reactor
 9d3c0050d85457074fc092704650baa9 Assembly-CSharp.dll:Cinemachine.CinemachineGroupComposer
-0fc76cb6b6c712d97a42a94301735f24 Assembly-CSharp.dll:.GameController
+95987e06fc528336879f439bcb8d3a32 Assembly-CSharp.dll:.GameController
 0d9c8b4275ad157d5c0da68d795fd426 Assembly-CSharp.dll:Cinemachine.Timeline.CinemachineShot
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EventTriggerTest
 910edd412760e3f6250b4c37af7f3584 Assembly-CSharp.dll:Cinemachine.PostFX.CinemachinePostFX
@@ -187,6 +188,7 @@ d18c33edcaacdc156f492b974381a4ea Assembly-CSharp.dll:.MainCamera
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ParticleSystemAutoDestroy
 77f7440e8f4da80d8eaa9681509617ea Assembly-CSharp.dll:.AIFollowTarget
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerInput
+f6ad39ef5dc74bbc620efdfdafe7c117 Assembly-CSharp.dll:.HomingMissile
 47e7ad8e0df35fc99b76b06faa63c661 Assembly-CSharp.dll:.Enemy
 fa13a1b0ff073fa1b299c99b81377ef1 Assembly-CSharp.dll:Cinemachine.CinemachineBrain
 83cf8d445f7f66fde23b3753171acb45 Assembly-CSharp.dll:Cinemachine.CinemachineBasicMultiChannelPerlin
@@ -194,4 +196,3 @@ fa13a1b0ff073fa1b299c99b81377ef1 Assembly-CSharp.dll:Cinemachine.CinemachineBrai
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DamageText
 06d24c1ff2618999b23f770a2654de51 Assembly-CSharp.dll:Cinemachine.CinemachineClearShot
 98bbf0f63dd394ba1c7e54747c4ab8de Assembly-CSharp.dll:.DamageTextController
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FlameThrowerController

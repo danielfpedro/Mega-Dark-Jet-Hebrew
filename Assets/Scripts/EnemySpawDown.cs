@@ -19,10 +19,9 @@ public class EnemySpawDown : MonoBehaviour {
 	}
 
 	void SpawEnemy() {
-		GameObject clone = Instantiate (enemy, transform.position, transform.rotation);
+		GameObject clone = Instantiate (enemy, transform.position, new Quaternion(transform.rotation.x, 180f, transform.rotation.z, transform.rotation.w));
         clone.AddComponent<AIDown>();
-        clone.AddComponent<EnemyJetAI>();
-
-
+        // clone.AddComponent<EnemyJetAI>();
+        // EnemyJetAI eAI = clone.GetComponent<EnemyJetAI>();
     }
 }
