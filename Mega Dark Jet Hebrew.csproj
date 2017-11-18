@@ -134,7 +134,9 @@
     <Compile Include="Assets\EnemyJetAI.cs" />
     <Compile Include="Assets\EnemySpawDown.cs" />
     <Compile Include="Assets\EventTriggerTest.cs" />
+    <Compile Include="Assets\FlameThrowerController.cs" />
     <Compile Include="Assets\HealthBar.cs" />
+    <Compile Include="Assets\HomingMissile.cs" />
     <Compile Include="Assets\JetController.cs" />
     <Compile Include="Assets\KillCounter.cs" />
     <Compile Include="Assets\ParticleSystemAutoDestroy.cs" />

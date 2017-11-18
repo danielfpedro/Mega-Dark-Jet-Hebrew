@@ -9,6 +9,8 @@ public class EnemyJetAI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        weapon = transform.Find("Weapons/Pinch").gameObject;
+
         InvokeRepeating("Shot", 0f, shotRate);
 	}
 	

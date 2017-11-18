@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
 	public static GameController instance;
-	public GameObject Hero;
+	public GameObject player;
+    public Transform playerSpaw;
 
 	public float heroSpeed = 10f;
 
@@ -20,7 +21,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		// Instantiate (Hero, Vector3.zero, new Quaternion(0f, 0f, 0f, 0f));
+		Instantiate (player, playerSpaw.position, playerSpaw.rotation);
 
 	}
 	
@@ -29,7 +30,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void HeroRespaw() {
-		Instantiate (Hero, Vector3.zero, new Quaternion(0f, 0f, 0f, 0f));
+		Instantiate (player, Vector3.zero, new Quaternion(0f, 0f, 0f, 0f));
 	}
 
 }

@@ -20,13 +20,11 @@ public class BulletSpaw : MonoBehaviour {
 	public void Shot() {
         bool facingRight = (transform.root.localScale.x >= 0);
         GameObject shot = Instantiate(ammo, transform.position, transform.rotation) as GameObject;
-        if (!facingRight)
-        {
-            shot.transform.localScale = new Vector2(shot.transform.localScale.x * -1, shot.transform.localScale.y);
-        }
-        shot.GetComponent<BulletController>().damage = damage;
-        Rigidbody2D ammoRb = shot.GetComponent<Rigidbody2D>();
-        ammoRb.AddRelativeForce(((facingRight) ? Vector2.right : Vector2.left) * force);
+
+        /**BulletController shotController = shot.GetComponent<BulletController>();
+        shotController.damage = damage;
+        shotController.force = force;
+        shotController.facingRight = facingRight;**/
 
         /**GameObject shot = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
 		shot.transform.SetParent (transform);

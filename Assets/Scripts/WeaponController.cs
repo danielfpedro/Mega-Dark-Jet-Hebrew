@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour {
 
-	public Transform Spaws;
 	public float fireRate = 0.1f;
     public bool facingRight = true;
 
